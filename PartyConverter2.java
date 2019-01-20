@@ -218,7 +218,8 @@ public class PartyConverter2 extends Application {
                                 listConvertedHH.add(listOriginalHH.get(i));
                             }
                         }
-                        String outPutFolder = "D:\\PartyPokerConverter\\hh\\" + tableName + ".txt";
+						String outPutPath = "folder path";
+						String outPutFolder = outPutPath + tableName + ".txt";
                         try {
                             PrintWriter kirjoittaja = new PrintWriter(outPutFolder);
                             for (int i = 0; i < listConvertedHH.size(); i++) {
@@ -241,9 +242,10 @@ public class PartyConverter2 extends Application {
     }
 
     public static String getFile() {
+		String filePath = "file path";
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyMMdd");
         LocalDateTime now = LocalDateTime.now();
-        String file = "D:\\PartyGaming\\PartyPoker\\HandHistory\\NutCr4cker12";
+        String file = filePath;
         String fileDate = file + "\\" + dtf.format(now);
         return fileDate;
     }
